@@ -1,18 +1,22 @@
-import express, { Router } from "express"
-import { createNote, deleteNode, getAllNotes, updateNote } from "../controllers/notesController.js";
+import express, { Router } from "express";
+import {
+  createNote,
+  deleteNode,
+  getAllNotes,
+  updateNote,
+} from "../controllers/notesController.js";
 
 const router = express.Router();
 
-router.get("/nth", getAllNotes)
+router.get("/nth", getAllNotes);
 
-router.post("/", createNote)
+router.post("/", createNote);
 
-router.put("/:id", updateNote)
+router.put("/:id", updateNote);
 
-router.delete("/:id",deleteNode)
+router.delete("/:id", deleteNode);
 
-export default router
-
+export default router;
 
 // app.get("/api/notes", (req, res) => {
 //   res.status(200).send("You have 50 notes currently.");
